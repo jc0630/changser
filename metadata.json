@@ -1,0 +1,8 @@
+{
+  "name": "強實企業",
+  "description": "全方位金屬外覆系統整合專家，提供自材料選用、建築規劃、防火耐燃工法至責任施工的一站式工程服務。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0284c7; /* Vibrant Trust Blue */
+  --color-primary-container: #0369a1;
+  --color-primary-light: #e0f2fe;
+  --color-secondary: #10b981; /* Eco Emerald Green */
+  --color-accent: #0284c7;
+  --color-teal-glow: #38bdf8;
+  --color-emerald-accent: #10b981;
+  --color-gold-accent: #0284c7;
+  --color-dark-bg: #0f172a;
+  --color-slate-title: #0f172a;
+  --color-slate-body: #334155;
+  --color-slate-card: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f8fafc;
+  --color-surface-cyan: #f0f9ff;
+  --color-surface-container: #f8fafc;
+  --color-surface-border: #e2e8f0;
+  --color-tertiary-fixed: #0284c7;
+  --color-on-surface: #0f172a;
+  --color-outline-gold: rgba(2, 132, 199, 0.25);
+  --font-sans: "Noto Sans TC", "Plus Jakarta Sans", sans-serif;
+  --font-en: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    color: #1e293b;
+    background-color: #f8fafc;
+    scroll-behavior: smooth;
+    background-image: 
+      linear-gradient(to right, rgba(226, 232, 240, 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(226, 232, 240, 0.4) 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-position: center top;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0284c7;
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .bg-grid-slate-100 {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px), linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+  }
+  .bg-grid-slate-800 {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+  }
+  .bg-grid-emerald-100 {
+    background-size: 24px 24px;
+    background-image: linear-gradient(to right, rgba(16, 185, 129, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(16, 185, 129, 0.1) 1px, transparent 1px);
+  }
+  .bg-grid-sky-100 {
+    background-size: 24px 24px;
+    background-image: linear-gradient(to right, rgba(2, 132, 199, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(2, 132, 199, 0.1) 1px, transparent 1px);
+  }
+  .bg-blueprint {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  }
+  .bg-diagonal-stripes {
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(148, 163, 184, 0.05) 10px, rgba(148, 163, 184, 0.05) 20px);
+  }
+  .arch-line-vertical {
+    position: absolute;
+    top: -100px;
+    bottom: -100px;
+    width: 1px;
+    background: rgba(148, 163, 184, 0.2);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .arch-line-left { left: 10%; }
+  .arch-line-right { right: 10%; }
+  .arch-line-center { left: 50%; transform: translateX(-50%); }
+  
+  .arch-bg-fade {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(248,250,252,0) 100%);
+  }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
